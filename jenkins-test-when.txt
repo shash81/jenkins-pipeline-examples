@@ -1,11 +1,10 @@
 pipeline {
     agent any
 
-    stages {
-   
+    stages {   
         stage("dev") {
          when {        
-               branch "develop"            
+               branch "origin/develop"            
               }
             steps {
                 echo "executing dev branch"
@@ -13,7 +12,7 @@ pipeline {
         }
          stage("master") {
          when {        
-               branch "master"           
+               branch "origin/master"           
               }
             steps {
                 echo "executing master branch"
