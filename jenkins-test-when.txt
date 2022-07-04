@@ -5,22 +5,22 @@ pipeline {
    
         stage('dev') {
          when {
-           allOf{
-               branch 'develop'
-               }
+        
+               branch "develop"
+            
               }
             steps {
-                echo 'executing dev branch'
+                echo "executing dev branch"
             }
         }
          stage('master') {
          when {
-          allOf{
-               branch 'master'
-               }
+        
+               branch "master'
+           
               }
             steps {
-                echo 'executing master branch'
+                echo "executing master branch"
             }
         }
       
