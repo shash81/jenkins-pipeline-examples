@@ -1,0 +1,24 @@
+pipeline {
+    agent any
+
+    stages {
+   
+        stage('dev') {
+         when {
+               branch 'develop'
+              }
+            steps {
+                echo 'executing dev branch'
+            }
+        }
+         stage('master') {
+         when {
+               branch 'master'
+              }
+            steps {
+                echo 'executing master branch'
+            }
+        }
+      
+    }
+}
